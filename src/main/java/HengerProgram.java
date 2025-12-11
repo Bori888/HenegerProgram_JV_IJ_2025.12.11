@@ -16,8 +16,8 @@ public class HengerProgram {
         MertaniHenger mh2 = new MertaniHenger(2, 2);
         MertaniHenger th1 = new TomorHenger(3, 3);
         MertaniHenger th2 = new TomorHenger(3, 3, 3.5);
-        MertaniHenger lh1 = new LyukasHemger(4, 4, 4);
-        MertaniHenger lh2 = new LyukasHemger(5, 5, 5.5, 5.55);
+        MertaniHenger lh1 = new LyukasHenger(4, 4, 4);
+        MertaniHenger lh2 = new LyukasHenger(5, 5, 5.5, 5.55);
 
         hengerek.add(new MertaniHenger(1, 1));
         hengerek.add(mh2);
@@ -33,8 +33,8 @@ public class HengerProgram {
             String extra = "";
             if (h instanceof TomorHenger) {
                 extra = String.format(", fajsúly=%.2f, súly=%.2f", ((TomorHenger) h).getFajsuly(), ((TomorHenger) h).terfogat() * ((TomorHenger) h).getFajsuly());
-            } else if (h instanceof LyukasHemger) {
-                extra = String.format(", falvastagság=%.2f", ((LyukasHemger) h).getFalvastagsag());
+            } else if (h instanceof LyukasHenger) {
+                extra = String.format(", falvastagság=%.2f", ((LyukasHenger) h).getFalvastagsag());
             }
             System.out.printf("%-12s | sugár=%.2f, magasság=%.2f, térfogat=%.2f%s%n", tipus, h.getSugar(), h.getMagassag(), terfogat, extra);
         }
@@ -58,7 +58,7 @@ public class HengerProgram {
         for (MertaniHenger h : hengerek) {
             if (h instanceof TomorHenger) {
                 ossz += ((TomorHenger) h).getFajsuly() > 0 ? ((TomorHenger) h).terfogat() * ((TomorHenger) h).getFajsuly() : 0;
-            } else if (h instanceof LyukasHemger) {
+            } else if (h instanceof LyukasHenger) {
 
             }
         }

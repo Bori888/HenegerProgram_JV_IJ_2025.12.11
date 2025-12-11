@@ -1,11 +1,11 @@
-public class LyukasHemger extends MertaniHenger {
+public class LyukasHenger extends MertaniHenger {
     private double falvastagsag;
 
-    public LyukasHemger(double sugar, double magassag, double falvastagsag) {
+    public LyukasHenger(double sugar, double magassag, double falvastagsag) {
         this(sugar, magassag, 1, falvastagsag);
     }
 
-    public LyukasHemger(double sugar, double magassag, double fajsuly, double falvastagsag) {
+    public LyukasHenger(double sugar, double magassag, double fajsuly, double falvastagsag) {
         super(sugar, magassag);
         this.falvastagsag = falvastagsag;
     }
@@ -22,8 +22,12 @@ public class LyukasHemger extends MertaniHenger {
 
     @Override
     public String toString() {
-        return "Cso{" +
-                "falvastagsag=" + falvastagsag +
+        return "LyukasHenger{" +
+                "sugar=" + getSugar() +
+                ", magassag=" + getMagassag() +
+                ", falvastagsag=" + falvastagsag +
+                ", terfogat=" + terfogat() +
                 '}';
     }
+
 }

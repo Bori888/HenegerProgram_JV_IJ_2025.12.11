@@ -22,8 +22,12 @@ public class TomorHenger extends MertaniHenger {
     @Override
     public String toString() {
         return "TomorHenger{" +
-                "fajsuly=" + fajsuly +
+                "sugar=" + getSugar() +
+                ", magassag=" + getMagassag() +
+                ", fajsuly=" + fajsuly +
+                ", terfogat=" + terfogat() +
                 ", suly=" + suly() +
                 '}';
     }
+
 }
