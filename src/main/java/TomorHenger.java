@@ -3,8 +3,12 @@ public class TomorHenger extends MertaniHenger {
     private double fajsuly;
 
     public TomorHenger(double sugar,double magassag,double fajsuly) {
-        this(sugar,magassag);
+        super(sugar,magassag);
         this.fajsuly=fajsuly;
+    }
+    public TomorHenger(double sugar,double magassag) {
+        super(sugar,magassag);
+
     }
 
     public double getFajsuly() {

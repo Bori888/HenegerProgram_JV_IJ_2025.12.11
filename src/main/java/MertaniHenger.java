@@ -2,7 +2,7 @@ public class MertaniHenger {
     private  static int hengerDarab;
     private double sugar,magassag;
 
-    public MertaniHenger() {
+    public MertaniHenger(double sugar,double magassag) {
         this.sugar = sugar;
         this.magassag = magassag;
     }
