@@ -1,9 +1,9 @@
 package hu.szamalk;
 
-public class Cso {
+public class LyukasHemger {
     private  double falvastagsag;
 
-    public Cso(double falvastagsag) {
+    public LyukasHemger(double falvastagsag) {
         this.falvastagsag = falvastagsag;
     }
 

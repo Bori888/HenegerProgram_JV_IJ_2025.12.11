@@ -4,10 +4,14 @@ package hu.szamalk;
 import java.util.List;
 
 public class HengerProgram {
-    private List hengerek;
+    private List <MertaniHenger>hengerek;
 
-    public HengerProgram(List hengerek) {
-        this.hengerek = hengerek;
+    public static void main(String[] args) { new HengerProgram().run();
+
+    }
+
+    public HengerProgram() {
+
     }
     public double atlagTerfogat() {
 
@@ -17,13 +21,11 @@ public class HengerProgram {
 
         return 0;
     }
-    private List lista(){
+    private List<MertaniHenger> lista(){
         return List.of();
     }
     public void run(){}
 
 
-    public static void main(String[] args) {
 
-    }
 }
