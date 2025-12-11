@@ -1,21 +1,23 @@
 public class LyukasHemger extends MertaniHenger {
-    private  double falvastagsag;
+    private double falvastagsag;
 
-    public LyukasHemger(double sugar,double magassag,double falvastagsag) {
-        this(sugar,magassag,1,falvastagsag);
+    public LyukasHemger(double sugar, double magassag, double falvastagsag) {
+        this(sugar, magassag, 1, falvastagsag);
     }
 
-    public LyukasHemger(double sugar,double magassag,double fajsuly,double falvastagsag) {
-        super(sugar,magassag,fajsuly);
+    public LyukasHemger(double sugar, double magassag, double fajsuly, double falvastagsag) {
+        super(sugar, magassag);
         this.falvastagsag = falvastagsag;
     }
 
     public double getFalvastagsag() {
         return falvastagsag;
     }
-    public  double terfogat(){
 
-        return 0;
+    public double terfogat() {
+        double kulso = getSugar();
+        double belso = kulso - falvastagsag;
+        return Math.PI * getMagassag() * (kulso * kulso - belso * belso);
     }
 
     @Override
