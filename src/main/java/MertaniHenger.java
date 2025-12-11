@@ -1,10 +1,11 @@
 public class MertaniHenger {
-    private  static int hengerDarab;
-    private double sugar,magassag;
+    private static int hengerDarab;
+    private double sugar, magassag;
 
-    public MertaniHenger(double sugar,double magassag) {
+    public MertaniHenger(double sugar, double magassag) {
         this.sugar = sugar;
         this.magassag = magassag;
+        hengerDarab++;
     }
 
     public static int getHengerDarab() {
@@ -18,8 +19,9 @@ public class MertaniHenger {
     public double getMagassag() {
         return magassag;
     }
-    public  double terfogat(){
-        return 0;
+
+    public double terfogat() {
+        return Math.PI * sugar * sugar * magassag;
     }
 
     @Override

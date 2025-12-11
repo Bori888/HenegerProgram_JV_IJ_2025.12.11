@@ -9,13 +9,13 @@ public class HengerProgram {
 
     }
     public void run(){
-        MertaniHenger mh1 =new MertaniHenger(1,1);
+        //MertaniHenger mh1 =new MertaniHenger(1,1);
         MertaniHenger mh2 =new MertaniHenger(2,2);
         MertaniHenger th1 =new TomorHenger(3,3);
         MertaniHenger th2 =new TomorHenger(3,3,3.5);
         MertaniHenger lh1 =new LyukasHemger(4,4,4);
         MertaniHenger lh2 =new LyukasHemger(5,5,5.5,5.55);
-        hengerek.add(mh1);
+        hengerek.add(/*m1*/new MertaniHenger(1,1));
         hengerek.add(mh2);
         hengerek.add(th1);
         hengerek.add(th2);
