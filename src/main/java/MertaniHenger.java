@@ -1,10 +1,8 @@
-package hu.szamalk;
-
 public class MertaniHenger {
     private  static int hengerDarab;
     private double sugar,magassag;
 
-    public MertaniHenger(double sugar, double magassag) {
+    public MertaniHenger() {
         this.sugar = sugar;
         this.magassag = magassag;
     }
