@@ -26,17 +26,23 @@ public class HengerProgram {
         hengerek.add(lh1);
         hengerek.add(lh2);
 
-        int db = MertaniHenger.getHengerDarab();
-        System.out.println("Hengerek (" + db + " db):");
-
-        for (MertaniHenger henger : hengerek) {
-            System.out.println(henger);
+        System.out.println("=== Hengerek listája (" + MertaniHenger.getHengerDarab() + " db) ===");
+        for (MertaniHenger h : hengerek) {
+            String tipus = h.getClass().getSimpleName();
+            double terfogat = h.terfogat();
+            String extra = "";
+            if (h instanceof TomorHenger) {
+                extra = String.format(", fajsúly=%.2f, súly=%.2f", ((TomorHenger) h).getFajsuly(), ((TomorHenger) h).terfogat() * ((TomorHenger) h).getFajsuly());
+            } else if (h instanceof LyukasHemger) {
+                extra = String.format(", falvastagság=%.2f", ((LyukasHemger) h).getFalvastagsag());
+            }
+            System.out.printf("%-12s | sugár=%.2f, magasság=%.2f, térfogat=%.2f%s%n", tipus, h.getSugar(), h.getMagassag(), terfogat, extra);
         }
 
-        System.out.println("Hengerek átlagtérfogata: " + atlagTerfogat());
-        System.out.println("Lyukas hengerek (csövek) súlya: " + csovekSulya());
-        System.out.println("Hengerek listája: " + lista());
+        System.out.printf("%nÁtlagos térfogat: %.2f%n", atlagTerfogat());
+        System.out.printf("Lyukas hengerek (csövek) összsúlya: %.2f%n", csovekSulya());
     }
+
 
     public double atlagTerfogat() {
         if (hengerek.isEmpty()) return 0;
